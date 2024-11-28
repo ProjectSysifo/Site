@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.slider, .slide-row, .slide-col, .hero img, .content, .indicator .btn {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: rgb(81, 12, 241);
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+main h1 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  color: rgb(255, 255, 255);
+  margin-bottom: 70px;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.slide-row {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-col {
+  position: relative;
+  flex: 0 0 100%;
+  max-width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.hero img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.content {
+  width: 80%;
+  max-width: 520px;
+  height: auto;
+  color: black;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 2;
+  user-select: none;
+  position: relative;
+}
+
+.content p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.content h2 .backcard {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #31d807;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.indicator .btn {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 4px;
+  border-radius: 15px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.btn.active {
+  width: 30px;
+}
+
+@media (max-width: 850px) {
+  main {
+    max-width: 500px;
+  }
+
+  .slide-col {
+    height: 300px;
+  }
+
+  .hero img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  main {
+    max-width: 300px;
+  }
+
+  .slide-col {
+    height: 250px;
+  }
+
+  .hero img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .content h2 {
+    font-size: 1rem;
+  }
+}
+#carrouselback{ 
+  height: 90vh;
+  border-style: solid;
+  border-width: 5px;
+  width: 100%;
+  background-color: blueviolet;
+}
+
